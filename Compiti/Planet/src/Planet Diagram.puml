@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+class Planet{
+    -Name: string
+    -Mass: double
+    -Volume: double
+    -Density: volume
+    -Radius: double
+    -Life: boolean
+    -Population: int
+    -Gas: boolean
+    -Albedo: float
+    +getName():string
+    +setName(string)
+}
+@enduml

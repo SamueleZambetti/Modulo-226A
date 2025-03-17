@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+class Prodotto {
+    -Nome: string
+    -Codice: int
+    -quantitaMagazzino: int
+    -Prezzo: double
+    +Prodotto(Nome: string, Codice: int, quantitaMagazzino: int, Prezzo: double)
+    +getNome():string
+    +setNome(string)
+    +getCodice(): int
+    +setCodice(int)
+    +getquantitaMagazzino():int
+    +setquantitaMagazzino(int)
+    +getPrezzo():double
+    +setPrezzo(double)
+    +aggiornaQuantita(int quantitaMagazzino)
+    +calcolaValoreTotale()
+    +toString():string
+}
+
+@enduml
