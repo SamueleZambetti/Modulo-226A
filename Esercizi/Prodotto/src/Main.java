@@ -1,14 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Prodotto prodotto = new Prodotto("Laptop", 101, 10, 799.99);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Inserisci il nome del prodotto:");
+        String nome = scanner.nextLine();
+
+        System.out.println("Inserisci il codice del prodotto:");
+        int codice = scanner.nextInt();
+
+        System.out.println("Inserisci la quantità in magazzino:");
+        int quantitaMagazzino = scanner.nextInt();
+
+        System.out.println("Inserisci il prezzo del prodotto:");
+        double prezzo = scanner.nextDouble();
+
+        Prodotto prodotto = new Prodotto(nome, codice, quantitaMagazzino, prezzo);
         System.out.println(prodotto);
 
-        prodotto.aggiornaQuantita(5);
+        System.out.println("Inserisci la quantità da aggiungere o rimuovere:");
+        int qtDaAggiornare = scanner.nextInt();
+
+        prodotto.aggiornaQuantita(qtDaAggiornare);
         System.out.println("Valore totale: " + prodotto.calcolaValoreTotale());
 
-        prodotto.aggiornaQuantita(-20);
-        System.out.println("Valore totale: " + prodotto.calcolaValoreTotale());
+        scanner.close();
     }
 }
