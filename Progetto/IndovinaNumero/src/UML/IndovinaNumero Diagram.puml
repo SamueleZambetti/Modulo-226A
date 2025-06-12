@@ -1,0 +1,32 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Gioco {
+    - random: Random
+    + generaNumero(min, max)
+    + isTooLow(guess, secret)
+    + isTooHigh(guess, secret)
+}
+
+class Giocatore {
+    - nome: String
+    - tentativi: int
+    - data: LocalDate
+    + Giocatore(nome, tentativi)
+    + Giocatore(nome, tentativi, data)
+    + getNome(): String
+    + getTentativi(): int
+    + getData(): LocalDate
+    + setData(data: LocalDate)
+    + toString(): String
+}
+
+class Salvataggio {
+    - path: Path
+    + Salvataggio(path)
+    + Scrivi(g)
+    + Leggi()
+}
+
+
+@enduml

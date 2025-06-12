@@ -1,0 +1,24 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Gioco {
+    -punteggi: ArrayList<Giocatore>
+    +gioca(): void
+    +mostraPunteggi(): void
+}
+
+class Giocatore {
+    -nome: String
+    -tentativi: int
+    -data: LocalDateTime
+    +Giocatore(nome, tentativi)
+    +Giocatore(nome, tentativi, data)
+    +getNome(): String
+    +getTentativi(): int
+    +getData(): LocalDateTime
+    +toString(): String
+    +equals(obj: Object): boolean
+    +hashCode(): int
+}
+
+@enduml
